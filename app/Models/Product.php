@@ -30,7 +30,7 @@ class Product extends Model
         return $this->hasMany(Review::class);
     }
 
-    // アクセサ
+    // アクセサ名「AverageRating」
     public function getAverageRatingAttribute()
     {
         if ($this->reviews->count() === 0) {
